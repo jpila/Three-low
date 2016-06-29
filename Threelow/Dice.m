@@ -10,21 +10,13 @@
 
 @implementation Dice
 
--(NSInteger)randomdiceValue;{
-  return _diceValue= arc4random()%6+1;
-    
-}
-@end
 
-/*{
--(instancetype)initwithInt:(NSInteger)diceValue;
+-(instancetype)init{
     self = [super init];
     if (self)
         _diceValue = arc4random()%6+1;
-    
     return self;
 }
 
 @end
  
- */
