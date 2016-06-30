@@ -11,43 +11,24 @@
 #import "Gamecontroller.h"
 
 int main(int argc, const char * argv[]) {
-    printf("Type roll to roll dice");
-    
-    GameController *diceGame = [[GameController alloc]init];
-    
-    while (YES) {
+  //  printf("Type roll to roll dice");
+    int x =1;
+    while (x ==1 ) {
+    NSArray *dicevalues;
+    dicevalues = @[[[Dice alloc]init]],[[Dice alloc]init],[[Dice alloc]init],[[Dice alloc]init],[[Dice alloc]init];
         
+        NSMutableSet *heldDice;
         
-        char rolltrigger[255];
-        fgets(rolltrigger,255,stdin);
-        NSString *userinput = [[NSString alloc]initWithUTF8String:rolltrigger];
-        if ([userinput isEqual:@"roll\n"] ){
-            
-            Dice *firstDie = [[Dice alloc]init];
-            NSLog(@"the first die rolled a %ld", firstDie.diceValue);
-            
-            Dice *secondDie = [[Dice alloc]init];
-            NSLog(@"the second die rolled a %ld", secondDie.diceValue);
-            
-            
-            Dice *thirdDie = [[Dice alloc]init];
-            NSLog(@"The third die rolled a %ld", thirdDie.diceValue);
-            
-            
-            Dice *fourthDie = [[Dice alloc]init];
-            NSLog(@"The fourth die rolled a %ld",fourthDie.diceValue);
-            
-            
-            Dice *fifthDie = [[Dice alloc]init];
-            NSLog(@"The fifth die rolled a %ld", fifthDie.diceValue);
-            
-            printf("Type roll to roll again");
+    printf("Type roll to roll again");
+        char rollcontrol[255];
+        fgets(rollcontrol,255,stdin);
+        NSString *diceroller = [[NSString alloc]initWithUTF8String:rollcontrol];
+        if ([diceroller isEqualToString:@"roll\n"]){
+            x=1;
         }else {
-            break; }
+            x=0;
+        }
     }
-
-   
-    
     
     return 0;
 }

@@ -12,8 +12,6 @@
 
 @property NSInteger diceValue;
 
--(NSInteger)randomdiceValue;
-
--(instancetype)initwithInt;
+-(instancetype)init;
 
 @end

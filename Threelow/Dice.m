@@ -15,6 +15,7 @@
     self = [super init];
     if (self)
         _diceValue = arc4random()%6+1;
+    NSLog(@"The dice has rolled %li",_diceValue);
     return self;
 }
 
