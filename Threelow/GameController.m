@@ -7,21 +7,22 @@
 //
 
 #import "GameController.h"
-
+#import "Dice.h"
 @implementation GameController
 
 -(void)rollDie{
     
 }
 
--(void)holdDieatindex:(NSInteger)index{
-    NSMutableArray *dicevalue = [[NSMutableArray alloc]initWithCapacity:6];
-    [dicevalue setObject:self atIndexedSubscript:index];
+-(void)holdDieatindex:(NSInteger)index {
+    [self.heldDice addObject:self.allDice[index- 1]];
 }
 
 - (instancetype)init{
     if (self = [super init]){
-        }
+        _allDice = @[[Dice new],[Dice new],[Dice new],[Dice new],[Dice new]];
+        self.heldDice =[[NSMutableSet alloc]init];
+    }
     return self;
 }
 

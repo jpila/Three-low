@@ -10,8 +10,8 @@
 
 @interface GameController : NSObject
 
-@property  NSMutableArray *allDice;
-@property  NSMutableArray *heldDice;
+@property  NSArray *allDice;
+@property  NSMutableSet*heldDice;
 
 
 -(void)rollDie;
